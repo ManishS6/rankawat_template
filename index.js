@@ -32,14 +32,15 @@ app.get('/generatepdf', (req, res) => {
   const type_of_document = req.body.type;
   switch(type_of_document){
     case "builty": {
-      templatePath = "builty.html"; 
+      templatePath = "./builty.html"; 
       req.body.consignor=req.body.consignor.consign; 
       req.body.consignee=req.body.consignee.consign; 
       break;
     }
-    case "challan": templatePath = "challan.html"; break;
-    case "receipt": templatePath = "receipt.html"; break;
+    case "challan": templatePath = "./challan.html"; break;
+    case "receipt": templatePath = "./receipt.html"; break;
   }
+  console.log(`XXX: file name is ${templatePath}`)
   const jsonData = req.body;
   console.log("req is :" , req);
 
