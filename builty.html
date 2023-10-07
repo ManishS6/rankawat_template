@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Builty</title>
+    <style>
+        /* CSS styling for the invoiceB */
+        body {
+            font-family: Arial, sans-serif;
+            color: darkblue;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .invoiceB {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: pink;
+            border: 1px solid darkblue;
+            padding: 20px;
+        }
+
+        .invoiceB-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoiceB-header h2 {
+            margin: 2px;
+            color: red;
+        }
+
+
+        .invoiceB-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+
+        .invoiceB-details p {
+            margin: 0;
+        }
+
+        .invoiceB-details h1 {
+            color: red;
+            font-size: 39px;
+        }
+
+        .invoiceB-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .invoiceB-table th,
+        .invoiceB-table td {
+            border: 1px solid darkblue;
+            padding: 8px;
+        }
+
+        .invoiceB-total {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .red-cell {
+            color: red;
+        }
+
+        .blue-bg {
+            background-color: skyblue;
+            color: white !important;
+        }
+
+        @media print {
+
+            /* CSS rules for print styling */
+            .print-button {
+                display: none !important;
+            }
+
+            .test1,
+            .test2 {
+                display: block !important;
+                text-align: center !important;
+                margin: 0 auto !important;
+            }
+        }
+    </style>
+    <script>
+        function setPrintClass(className) {
+            const invoiceDiv = document.querySelector('.invoiceB');
+            invoiceDiv.className = 'invoiceB ' + className;
+            window.print();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="invoiceB">
+        <div class="invoiceB-header">
+            <div class="invoiceB-details" style="margin: 0;">
+                <p> ॐ GSTIN: 08MYHPS2453N1ZH </p>
+                <p>All Subject to SURATGARH juridication only</p>
+                <p>Mob: 9024531329</p>
+            </div>
+            <div class="invoiceB-details" style="margin: 0;">
+                <p>&nbsp;</p>
+                <p>9571843625</p>
+            </div>
+            <!-- <div class="invoiceB-details" style="margin: 0;">
+                <h1>&nbsp;</h1>
+                <h1>RANKAWAT TRANSPORT COMPANY</h1>
+                <p>01509223029</p>
+            </div> -->
+            <div class="test1" style="display: flex; justify-content: center; align-items: center;">
+                <table style="width: 100%; border-collapse: collapse;">
+
+                    <!-- <table class="invoiceB-details"> -->
+                    <tr>
+                        <td style="text-align: center; border: 1px solid black; color: red; ">
+                            <h1>RANKAWAT TRANSPORT COMPANY</h1>
+                        </td>
+                        <td style="text-align: right; vertical-align: top; border: 1px solid black; padding: 10px;">
+                            Ph:123456789 </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <table class="invoiceB-table ">
+            <tr>
+                <td style="font-size: small;" rowspan="2">138 B, New Dhan Mandi,<br /> Suratgarh Distt. SGNR <br /> PIN
+                    -
+                    335804 (Raj.)
+                </td>
+                <td> Agent: </td>
+                <td rowspan="2">GR No. <br /> <br /> {{id}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>K.R. GOLDEN TRANSPORT COMPANY <br /> DELHI PUNJAB GOODS CARRIER PVT. LTD.</h3>
+                </td>
+            </tr>
+        </table>
+
+        <table class="invoiceB-table">
+            <tr>
+                <th>AT OWNERS'S RISK</th>
+                <th>VALUE ____________</th>
+                <th>Dated</th>
+                <th><u>{{date}}</u></th>
+            </tr>
+            <tr>
+                <td>Consignor's Name</td>
+                <td><u>{{consignor}}</u></td>
+                <td>FROM</td>
+                <td>SURATGARH</td>
+            </tr>
+            <tr>
+                <td>Consignee's Name</td>
+                <td><u>{{consignee}}</u></td>
+                <td>TO</td>
+                <td>____________</td>
+            </tr>
+            <tr></tr>
+        </table>
+        <table class="invoiceB-table">
+            <!-- <thead> -->
+            <tr>
+                <th rowspan="2" colspan="2" style="font-size: medium;">Delivery & Booking</th>
+                <th style="width: 5px ;" rowspan="2" colspan="1">No. of packages</th>
+                <th rowspan="2" colspan="1">Description (Said to Contain)</th>
+                <th rowspan="1" colspan="2">Weight</th>
+                <th rowspan="2" colspan="1">Rate</th>
+                <th rowspan="1" colspan="2">Fright</th>
+            </tr>
+            <tr>
+                <th rowspan="1" colspan="1">Actual</th>
+                <th rowspan="1" colspan="1">Charged</th>
+                <th rowspan="1" colspan="1">PAID</th>
+                <th rowspan="1" colspan="1">TO PAY</th>
+            </tr>
+            <!-- </thead> -->
+            <!-- <tbody> -->
+            <tr>
+                <td rowspan="10" style="text-align:left; font-size: x-small; padding-left: 4px;">
+                    Sri Ganganagar
+                    <br />
+                    DELIVERY
+                    <br />
+                    Bikaner
+                    <br />
+                    DELIVERY
+                    <br />
+                    Jaipur
+                    <br />
+                    Jaipur
+                    <br />
+                    Anupgarh
+                    <br />
+                    Bhadra
+                    <br />
+                    Elnabad
+                    <br />
+                    Gharsana
+                    <br />
+                    H Town
+                    <br />
+                    H Junction
+                    <br />
+                    Jetsar
+                    <br />
+                    Sri Karanpur
+                    <br />
+                    Kesrisinghpur
+                    <br />
+                    Khajuwala
+                    <br />
+                    Loonkaransar
+                    <br />
+                    Nohar
+                    <br />
+                    Pilibangan
+                    <br />
+                    Padampur
+                    <br />
+                    Gajsinghpur
+                    <br />
+                    Raisinghpur
+                    <br />
+                    Rawla
+                    <br />
+                    Rawatsar
+                    <br />
+                    Sadulshahar
+                    <br />
+                    Sangaria
+                    <br />
+                    Sri Biyanagar
+                    <br />
+                    Sirsa
+                    <br />
+                    Tibbi
+                    <br />
+                    Talwarajeel
+                    <br />
+                    Goluwala
+                    <br />
+                    Rajiyasar
+                    <br />
+                    Arjunsar
+                    <br />
+                    Mahazan
+                    <br />
+                    Ramsingpur
+                </td>
+                <td rowspan="10" style="text-align:right; font-size: x-small; padding-right: 4px;">
+                    2487280 <br />
+                    2475036 <br />
+                    83850-31920 <br />
+                    83029-20010 <br />
+                    94133-46232 <br />
+                    97821-91104 <br />
+                    94144-51378 <br />
+                    224896 <br />
+                    90505-26808 <br />
+                    96104-47033 <br />
+                    223863 <br />
+                    268678 <br />
+                    94149-52334 <br />
+                    98750-66229 <br />
+                    88754-78927 <br />
+                    94139-31353 <br />
+                    94138-05693 <br />
+                    95875-29583 <br />
+                    94602-85965 <br />
+                    94131-78135 <br />
+                    99828-07810 <br />
+                    87640-43195 <br />
+                    94629-90433 <br />
+                    98282-65328 <br />
+                    94142-30593 <br />
+                    94133-78540 <br />
+                    74120-10007 <br />
+                    94166-22982 <br />
+                    94145-09082 <br />
+                    94607-86091 <br />
+                    94603-01545 <br />
+                    84327-90351 <br />
+                    77928-71957 <br />
+                    94685-50940 <br />
+                    99825-96006
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" rowspan="5">&nbsp;</td>
+                <td>S.C.</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>L.C.</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>R.C.</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>B.C.</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="text-decoration:bold;">TOTAL</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <!-- </tbody> -->
+            <!-- <tfoot> -->
+            <tr>
+                <td colspan="5" style=" padding: 2px !important; text-align:left; font-size: x-small;">
+                    बिना बीमा माल की आगज़नी एवं डकैती होने पर कम्पनी ज़िम्मेवार नहीं होगी <br />
+                    Consignee will be responsible for Leakage & Breakage. <br />
+                    No Re-Booking will be entertained after Six Months. <br />
+                    All Services from and to Rajasthan, Punjab, Haryana, Gujrat, Maharastra and
+                    All South.
+                </td>
+                <td colspan="2" style="text-align:right">
+                    <br /> <br /> Signature
+                </td>
+            </tr>
+            <!-- </tfoot> -->
+        </table>
+        <button class="print-button" onclick="window.print()">Print </button>
+    </div>
+</body>
+
+</html>

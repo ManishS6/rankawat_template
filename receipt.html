@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delivery Reciept</title>
+    <style>
+        /* CSS styling for the invoice */
+        body {
+            font-family: Arial, sans-serif;
+            color: darkblue;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .invoice {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid darkblue;
+            padding: 20px;
+        }
+
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-header h2 {
+            margin: 2px;
+            color: red;
+        }
+
+
+        .invoice-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+
+        .invoice-details p {
+            margin: 0;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            border: 1px solid darkblue;
+            padding: 8px;
+        }
+
+        .invoice-total {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .red-cell {
+            color: red;
+        }
+
+        .blue-bg {
+            background-color: skyblue;
+            color: white !important;
+        }
+
+
+            /* CSS rules for print styling */
+            .print-button {
+                display: none !important;
+            }
+
+            .invoice {
+                width: 40%;
+                float: left;
+            }
+
+            .invoice-header h2 {
+                margin: 2px;
+                color: red;
+            }
+
+            .blue-bg {
+                background-color: skyblue !important;
+                color: white !important;
+            }
+
+
+            .invoice.left-print {
+                float: left;
+                margin-left: 0px !important;
+            }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="invoice left-print">
+        <div class="invoice-header">
+            <div class="invoice-details" style="margin: 0;">
+                <p>DELIVERY RECEIPT</p>
+                <p>9024531329, 9571843625</p>
+            </div>
+            <h2>Rankawat Transport Co. Suratgarh</h2>
+            <h2 class="blue-bg">K.R. GOLDEN TRANSPORT CO.</h2>
+            <h2 class="blue-bg">DELHI PUNJAB GOODS CARRIER</h2>
+        </div>
+
+        <div class="invoice-details" style="margin-bottom:15px ;">
+            <p>No: {{id}}</p>
+            <p>Date: {{created_at}}</p>
+        </div>
+
+        <div class="invoice-details" style="margin-bottom: 20px;">
+            <p>M/s: {{sender}}</p>
+        </div>
+
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Amount</th>
+                    <th>&nbsp;</th>
+                    <th>Particulars</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="red-cell">Freight</td>
+                    <td>{{fright}}</td>
+                    <td class="red-cell">G.R No.</td>
+                    <td>{{gr}}</td>
+                </tr>
+                <tr>
+                    <td class="red-cell">Commission</td>
+                    <td>{{commision}}</td>
+                    <td class="red-cell">Date</td>
+                    <td>{{date}}</td>
+                </tr>
+                <tr>
+                    <td class="red-cell">Labour</td>
+                    <td>{{labour}}</td>
+                    <td class="red-cell">From</td>
+                    <td>{{from}}</td>
+                </tr>
+                <tr>
+                    <td class="red-cell">S. Exp.</td>
+                    <td>{{s._exp}}</td>
+                    <td class="red-cell">Nag.</td>
+                    <td>{{nag}}</td>
+                </tr>
+                <tr>
+                    <td class="red-cell">Demurrage</td>
+                    <td>{{demurrage}}</td>
+                    <td class="red-cell">Weight</td>
+                    <td>{{weight}}</td>
+                </tr>
+                <tr>
+                    <td class="red-cell" style="text-decoration:bold;">Total</td>
+                    <td>{{total}}</td>
+                    <td class="red-cell">Item</td>
+                    <td>{{item}}</td>
+                </tr>
+                <tr>
+                    <td class="red-cell">Loading</td>
+                    <td>{{loading}}</td>
+                    <td class="red-cell">P.M.</td>
+                    <td>{{pm}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Bank Of Baroda <br />
+                    A/c 34000200000599 <br />
+                    IFSC: BARB0SURATG
+                </td>
+                    <td>Sender</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" style="text-align:left">
+                        Goods Received
+                    </td>
+                    <td colspan="2" style="text-align:left">
+                        Delivery Clerk
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

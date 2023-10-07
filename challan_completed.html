@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challan</title>
+    <style>
+        /* CSS styling for the invoiceC */
+        body {
+            font-family: Arial, sans-serif;
+            color: darkblue;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .invoiceC {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid darkblue;
+            padding: 20px;
+        }
+
+        .invoiceC-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoiceC-header h1 {
+            border-top: 2px solid darkblue;
+            margin: 0;
+            color: darkblue;
+            border-bottom: 2px solid darkblue;
+        }
+
+        .invoiceC-header h4 {
+            margin: 2px;
+        }
+
+        .invoiceC-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+
+        .invoiceC-details p {
+            margin: 0;
+        }
+
+        .invoiceC-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .invoiceC-table th,
+        .invoiceC-table td {
+            border: 1px solid darkblue;
+            padding: 8px;
+        }
+
+        .invoiceC-total {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+
+        @media print {
+
+            /* CSS rules for print styling */
+            .print-button {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoiceC">
+        <div class="invoiceC-header">
+            <div class="invoiceC-details" style="margin: 0;">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>SHRI GANESHAI NAMAH</p>
+                <p>9773657208</p>
+            </div>
+            <div class="invoiceC-details" style="margin: 0;">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>CHALLAN</p>
+                <p>9773657209</p>
+            </div>
+            <h1>RANKAWAT TRANSPORT COMPANY</h1>
+            <h4>138B, New Dhan Mandi, Suratgarh, Distt. SGNR - 335804 (Raj.)</h4>
+        </div>
+
+        <div class="invoiceC-details" style="margin-bottom:15px ;">
+            <p>Challan Number: 12345</p>
+            <p>Date: June 29, 2023</p>
+        </div>
+
+        <div class="invoiceC-details" style="margin-bottom: 20px;">
+            <p>Truck Number: HR51BE0066</p>
+            <p>Driver: Manish Swami</p>
+            <p>From: Suratgarh</p>
+            <p>To: Hisar</p>
+        </div>
+
+
+        <table class="invoiceC-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Consignee</th>
+                    <th>Consignor</th>
+                    <th>Builty No.</th>
+                    <th>Station</th>
+                    <th>Contents</th>
+                    <th>Pkgs.</th>
+                    <th>Weight</th>
+                    <th>To Pay</th>
+                    <th>PF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rankawat</td>
+                    <td>Nosil Steels</td>
+                    <td>42864</td>
+                    <td>HRY</td>
+                    <td>SHOE</td>
+                    <td>2</td>
+                    <td>20Kg</td>
+                    <td>40</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Commission</td>
+                    <td colspan="2">Truck Freight Upto</td>
+                    <td>Total:</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                    <td colspan="2"></td>
+                    <td colspan="5">माल हमारे कार्यालय के कहे अनुसार ख़ाली होगा</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="text-align: left;">Driver's Signature</td>
+                    <td colspan="5" style="text-align: right;">Booking Clerk</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button class="print-button" onclick="window.print()">Print</button>
+    </div>
+</body>
+
+</html>

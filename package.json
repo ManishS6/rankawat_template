@@ -1,0 +1,26 @@
+{
+  "name": "ra_template_pdf",
+  "version": "1.0.0",
+  "description": "package that returns pdf as API response based on template.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pdf",
+    "template",
+    "api",
+    "node"
+  ],
+  "author": "ra",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.36.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "html-pdf": "^3.0.1",
+    "nodemon": "^3.0.1"
+  }
+}
