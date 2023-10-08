@@ -83,12 +83,27 @@ app.get('/generatepdf', (req, res) => {
     }
 
     // Define PDF options (you can customize this)
-    const pdfOptions = {
-      format: 'A4', // or your preferred paper size/format
-    };
+    const config = {
+      "format": "A4",
+      "orientation": "portrait",
+      "dpi": 200,
+      "quality": 80,
+      "border": {
+        "left": "1cm",
+        "right": "1cm",
+        "top": "1cm",
+        "bottom": "1cm"
+      },
+      "header": {
+        "height": "10mm"
+      },
+      "footer": {
+        "height": "10mm"
+      }
+  }
 
     // Generate the PDF from the HTML
-    pdf.create(htmlTemplate, pdfOptions).toBuffer((err, buffer) => {
+    pdf.create(htmlTemplate, config).toBuffer((err, buffer) => {
       if (err) {
         return res.status(500).json({ error: 'Error generating PDF' });
       }
