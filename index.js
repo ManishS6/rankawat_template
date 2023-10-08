@@ -31,6 +31,16 @@ app.get('/generatepdf', (req, res) => {
   var templatePath = "";
   const type_of_document = req.query.type;
   console.log(type_of_document);
+  req.body = {
+    "consignor":{
+        "consign":"ABC",
+        "id":12
+    },
+    "consignee":{
+        "consign":"DEF",
+        "id":12
+    }
+}
   switch(type_of_document){
     case "builty": {
       templatePath = "builty.html"; 
@@ -43,6 +53,17 @@ app.get('/generatepdf', (req, res) => {
   }
   // console.log(`XXX: file name is ${templatePath}`)
   const jsonData = req.body;
+//   const jsonData = JSON.parse({
+//     "consignor":{
+//         "consign":"ABC",
+//         "id":12
+//     },
+//     "consignee":{
+//         "consign":"DEF",
+//         "id":12
+//     }
+// })
+
   console.log("req is :" , req);
 
   fs.readFile(templatePath, 'utf8', (err, htmlTemplate) => {
