@@ -29,18 +29,19 @@ app.get('/products', async (req, res) => {
 app.get('/generatepdf', (req, res) => {
   // Assuming you have an HTML template file called "template.html"
   var templatePath = "";
-  const type_of_document = req.body.type;
+  const type_of_document = req.query.type;
+  console.log(type_of_document);
   switch(type_of_document){
     case "builty": {
-      templatePath = "./builty.html"; 
+      templatePath = "builty.html"; 
       req.body.consignor=req.body.consignor.consign; 
       req.body.consignee=req.body.consignee.consign; 
       break;
     }
-    case "challan": templatePath = "./challan.html"; break;
-    case "receipt": templatePath = "./receipt.html"; break;
+    case "challan": templatePath = "challan.html"; break;
+    case "receipt": templatePath = "receipt.html"; break;
   }
-  console.log(`XXX: file name is ${templatePath}`)
+  // console.log(`XXX: file name is ${templatePath}`)
   const jsonData = req.body;
   console.log("req is :" , req);
 
